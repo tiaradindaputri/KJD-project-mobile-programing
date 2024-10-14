@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'menu_beranda.dart';
 
 void main() {
   runApp(MyApp());
@@ -92,7 +93,11 @@ class LoginPage extends StatelessWidget {
                 SizedBox(height: 20),
                 ElevatedButton(
                   onPressed: () {
-                    // Tambahkan aksi login di sini
+                    // Navigasi ke halaman beranda setelah login berhasil
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute(builder: (context) => BerandaPage()),
+                    );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Color(0xFF5EE8D1), // Warna latar belakang tombol
